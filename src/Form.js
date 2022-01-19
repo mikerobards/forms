@@ -1,16 +1,21 @@
 import React from "react"
 
 export default function Form() {
-    const [{
-        firstName,
-        lastName
-    }, setName] = React.useState("")
-    /**
-     * Challenge: Track the applicant's last name as well
-     */
+    const [formData, setFormData] = React.useState(
+        {
+            firstName: "",
+            lastName: ""
+        })
+
+    console.log(formData)
 
     function handleChange(event) {
-        setName({ [event.target.name]: event.target.value })
+        // setFormData({ [event.target.name]: event.target.value })
+        setFormData(prevFormData => ({
+            ...prevFormData,
+            [event.target.name]: event.target.value
+        })
+        )
     }
 
     return (
