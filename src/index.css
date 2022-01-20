@@ -7,7 +7,8 @@ body {
   padding: 20px;
 }
 
-input {
+input,
+textarea {
   margin-bottom: 15px;
   height: 30px;
   text-indent: 10px;
