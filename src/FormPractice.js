@@ -43,6 +43,7 @@ export default function App() {
             console.log("Successfully signed up")
         } else {
             console.log("passwords do not match")
+            return
         }
 
         if (formData.okayToEmail) {
